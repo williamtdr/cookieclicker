@@ -33,7 +33,7 @@
 :End
 :If {L3}(6)=95
 :Then
-:Menu("Cookie Clicker Menu","Manage Items",B,"Unlock Upgrades",C,"Achivements",D,"Quit",E)
+:Menu("Cookie Clicker","Manage Items",B,"Unlock Upgrades",C,"Achivements",D,"Quit",E)
 :End
 :End
 :"Update cookie count
