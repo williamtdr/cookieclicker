@@ -23,6 +23,7 @@
 :1→{L3}(2)
 :While {L3}(2)=1
 :sum(getTime)→{L3}(4)
+:sum(getTime)→{L3}(5)
 :While {L3}(4)={L3}(5)
 :sum(getTime)→{L3}(5)
 :getKey→{L3}(6)
