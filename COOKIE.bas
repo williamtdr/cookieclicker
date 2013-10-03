@@ -4,7 +4,7 @@
 :Disp "Cookie Clicker v2"
 :Disp "by williamtdr"
 :Disp "Loading Game..."
-:Lbl A
+:Lbl A1
 :ClrDraw
 :ZStandard
 :"Set up screen layout
@@ -15,7 +15,7 @@
 :"Draw cookie
 :Circle(0,{-}1,3)
 :"T denotes temporary variable
-:O→T
+:0→T
 :While T≤30
 :Pxl-On(randInt(27,38),randInt(35,58))
 :(T+1)→T
@@ -33,7 +33,7 @@
 :End
 :If {L3}(6)=95
 :Then
-:Menu("Cookie Clicker","Manage Items",B,"Unlock Upgrades",C,"Achivements",D,"Quit",E)
+:Menu("Cookie Clicker","Manage Items",A2,"Unlock Upgrades",A3,"Achivements",A4,"Quit",A5)
 :End
 :End
 :"Update cookie count
@@ -69,22 +69,20 @@
 :End
 :Text(17,26,"per second:",{L3}(3))
 :End
-:Lbl B
+:Lbl A2
 :Menu("Manage Items","Cursor",F1,"Grandma",F2,"Farm",F3,"Factory",F4,"Mine",F5,"Shipment",F6,"Alchemy Lab",F7,"Portal",F8,"Time Machine",F9,"Antimatter Condenser",F10,"Back",A)
-:Lbl C
+:Lbl A3
 :Disp "TO-DO: Add upgrades"
 :Pause
-:Goto A
-:Lbl D
+:Goto A1
+:Lbl A4
 :Disp "TO-DO: Add achivements"
 :Pause
-:Goto A
-:Lbl F1
+:Goto A1
+:Lbl B1
 :"Owned:",{L3}(7)→{L3}(8)
 :"Producing ",({L3}(7))," CPs"→{L3}(9)
 :"Next cost: ",(({L3}(7)*10)+10)→{L3}(10)
-:Menu("CURSORS",{L3}(8),A,{L3}(9),A,{L3}(10),E1,"BACK",A)
-:Lbl E1:
-:If {L3}(1)
-:Lbl E
+:Menu("CURSORS",{L3}(8),A1,{L3}(9),A1,{L3}(10),C1,"BACK",A1)
+:Lbl A5
 :Stop
