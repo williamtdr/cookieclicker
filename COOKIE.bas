@@ -20,6 +20,7 @@
 :Pxl-On(randInt(27,38),randInt(35,58))
 :(T+1)→T
 :End
+:({L3}(7)*0.1)→{L3}(3)
 :1→{L3}(2)
 :While {L3}(2)=1
 :sum(getTime)→{L3}(4)
@@ -80,9 +81,18 @@
 :Pause
 :Goto A1
 :Lbl B1
-:"Owned:",{L3}(7)→{L3}(8)
-:"Producing ",({L3}(7))," CPs"→{L3}(9)
-:"Next cost: ",(({L3}(7)*10)+10)→{L3}(10)
+:("Owned:",{L3}(7))→{L3}(8)
+:("Producing ",({L3}(7))," CPs")→{L3}(9)
+:("Buy one: ",(({L3}(7)*10)+10))→{L3}(10)
 :Menu("CURSORS",{L3}(8),A1,{L3}(9),A1,{L3}(10),C1,"BACK",A1)
+:Lbl C1
+:If {L3}(1)≥(({L3}(7)*10)+10)
+:Then
+:({L3}(1)-(({L3}(7)*10)+10))→{L3}(1)
+:({L3}(7)+1)→{L3}(7)
+:Goto B1
+:Else
+:Goto B1
+:End
 :Lbl A5
 :Stop
