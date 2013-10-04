@@ -71,7 +71,9 @@
 :Text(17,26,"per second:",{L3}(3))
 :End
 :Lbl A2
-:Menu("Manage Items","Cursor",B1,"Grandma",B2,"Farm",B3,"Factory",B4,"Mine",B5,"Shipment",B6,"Alchemy Lab",B7,"Portal",B8,"Time Machine",B9,"Antimatter Condenser",D1,"Back",A1)
+:Menu("Manage Items","Cursor",B1,"Grandma",B2,"Farm",B3,"Factory",B4,"Mine",B5,"Shipment",B6,"-More-",A6)
+:Lbl A6
+Menu("Manage Items 2","Alchemy Lab",B7,"Portal",B8,"Time Machine",B9,"Antimatter Condenser",D1,"Back",A1)
 :Lbl A3
 :Disp "TO-DO: Add upgrades"
 :Pause
