@@ -83,22 +83,22 @@
 :Pause
 :Goto A1
 :Lbl B1
-:{0,1→L₁
-:{0,{L3}(7)→L₂
-:LinReg(ax+b) Y₁
-:Equ►String(Y₁,Str1
-:sub(Str1,1,length(Str1)-3→{L3}(7)
+:{0,1→{L1}
+:{0,(({L3}(7)→{L2}
+:LinReg(ax+b) {{Y1}
+:Equ►String({Y1},Str1
+:sub(Str1,1,length(Str1)-3→{L3}(10)
 :"Owned:"+{L3}(7)→{L3}(8)
-:{0,1→L₁
-:{0,{L3}(7)→L₂
-:LinReg(ax+b) Y₁
-:Equ►String(Y₁,Str1
-:sub(Str1,1,length(Str1)-3→{L3}(9)
+:{0,1→{L1}
+:{0,{L3}(7)→{L2}
+:LinReg(ax+b) {{Y1}
+:Equ►String({Y1},Str1
+:sub(Str1,1,length(Str1)-3→{L3}(10)
 :"Producing:"+{L3}(9)→{L3}(9)
-:{0,1→L₁
+:{0,1→{L1}
 :{0,(({L3}(7)*10)+10)→{L2}
-:LinReg(ax+b) Y₁
-:Equ►String(Y₁,Str1
+:LinReg(ax+b) {{Y1}
+:Equ►String({Y1},Str1
 :sub(Str1,1,length(Str1)-3→{L3}(10)
 :"Buy One:"+{L3}(10)→{L3}(10)
 :Menu("CURSORS",{L3}(8),A1,{L3}(9),A1,{L3}(10),C1,"BACK",A1)
