@@ -31,6 +31,7 @@
 :If {L3}(6)=105
 :Then
 :({L3}(1)+1)→{L3}(1)
+:Goto A7
 :End
 :If {L3}(6)=95
 :Then
@@ -39,37 +40,7 @@
 :End
 :"Update cookie count
 :({L3}(3)+{L3}(1))→{L3}(1)
-:If {L3}(1)<10
-:Then
-:Text({-}1,10,20,"Cookies:",{L3}(1))
-:End
-:
-:If {L3}(1)<100 and {L3}(1)>10
-:Then
-:Text({-}1,10,16,"Cookies:",{L3}(1))
-:End
-:
-:If {L3}(1)<1000 and {L3}(1)>100
-:Then
-:Text({-}1,10,12,"Cookies:",{L3}(1))
-:End
-:
-:If {L3}(1)<10000 and {L3}(1)>1000
-:Then
-:Text({-}1,10,8,"Cookies:",{L3}(1))
-:End
-:
-:If {L3}(1)<100000 and {L3}(1)>10000
-:Then
-:Text({-}1,10,4,"Cookies:",{L3}(1))
-:End
-:
-:If {L3}(1)<1000000 and {L3}(1)>100000
-:Then
-:Text({-}1,10,1,"Cookies:",{L3}(1))
-:End
-:Text(17,26,"per second:",{L3}(3))
-:End
+:Goto A7
 :Lbl A2
 :Menu("Manage Items","Cursor",B1,"Grandma",B2,"Farm",B3,"Factory",B4,"Mine",B5,"Shipment",B6,"-More-",A6
 :Lbl A6
@@ -110,6 +81,38 @@
 :Goto B1
 :Else
 :Goto B1
+:End
+:Lbl A7
+:If {L3}(1)<10
+:Then
+:Text({-}1,10,20,"Cookies:",{L3}(1))
+:End
+:
+:If {L3}(1)<100 and {L3}(1)>10
+:Then
+:Text({-}1,10,16,"Cookies:",{L3}(1))
+:End
+:
+:If {L3}(1)<1000 and {L3}(1)>100
+:Then
+:Text({-}1,10,12,"Cookies:",{L3}(1))
+:End
+:
+:If {L3}(1)<10000 and {L3}(1)>1000
+:Then
+:Text({-}1,10,8,"Cookies:",{L3}(1))
+:End
+:
+:If {L3}(1)<100000 and {L3}(1)>10000
+:Then
+:Text({-}1,10,4,"Cookies:",{L3}(1))
+:End
+:
+:If {L3}(1)<1000000 and {L3}(1)>100000
+:Then
+:Text({-}1,10,1,"Cookies:",{L3}(1))
+:End
+:Text(17,26,"per second:",{L3}(3))
 :End
 :Lbl A5
 :Stop
